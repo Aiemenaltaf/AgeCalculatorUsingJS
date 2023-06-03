@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color: #50a3a2;
+    background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+    overflow: hidden;
+}
+
+.container{
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    background: inherit;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.08),
+                -10px -10px 10px 0px rgba(0, 0, 0, 0.05);
+
+}
+ul{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:transparent;
+}
+
+li{
+    position: absolute;
+    list-style: none;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #53e3a6;
+    filter: opacity(60%);
+    bottom: -160px;
+    animation: square 25s infinite;
+    transition-timing-function: linear;
+
+}
+
+li:nth-child(1){
+    left: 5%;
+}
+
+li:nth-child(2){
+    left: 20%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 2s;
+    animation-duration: 17s;
+}
+
+li:nth-child(3){
+    left: 25%;
+    animation-delay: 4s;
+}
+
+li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 3s;
+   background: #53e3a6;
+}
+
+li:nth-child(5){
+    left: 70%;
+}
+
+li:nth-child(6){
+    left: 80%;
+    width: 120px;
+    height: 120px;
+    animation-delay: 3s;
+   background: #53e3a6;
+}
+
+li:nth-child(7){
+    left: 32%;
+    width: 160px;
+    height: 160px;
+    animation-delay: 7s;
+}
+
+li:nth-child(8){
+    left: 55%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 15s;
+    animation-duration: 40s;
+}
+
+li:nth-child(9){
+    left: 25%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 2s;
+    animation-duration: 40s;
+    background:#53e3a6;
+}
+
+li:nth-child(10){
+    left: 90%;
+    width: 160px;
+    height: 160px;
+    animation-delay: 11s;
+}
+
+@keyframes square{
+    0%{
+        transform:translateY(0);
+    }
+    100%{
+        transform:translateY(-700px) rotate(600deg);
+    }
+}
+
+.date{
+    position: relative;
+    display:grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 10px;
+}
+
+.dateBar{
+    font-size: 1.5em;
+    margin-right: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: 10px solid transparent;
+    cursor: pointer;
+    background:transparent;
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.08),
+             -10px -10px 10px 0px rgba(0, 0, 0, 0.05);
+             z-index: 2;
+}
+
+::-webkit-calendar-picker-indicator{
+    position: relative;
+    font-size: 1rem;
+    transition: all ease 400ms;
+    transform: scale(1);
+    margin-left:5px;
+}
+
+::-webkit-calendar-picker-indicator:after{
+    position:absolute;
+    margin-left: 5px;
+}
+::-webkit-calendar-picker-indicator:hover{
+    transform:scale(1.5);
+    cursor:pointer;
+}
+
+button{
+    position:relative;
+    font-family: cursive;
+    border-radius: 5px;
+    font-size: 1em;
+    background: transparent;
+    border: none;
+    z-index: 1;
+    color: #53e3a6;
+    margin-right: 10px;
+    filter: brightness(2);
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.08),
+             -10px -10px 10px 0px rgba(0, 0, 0, 0.05);
+}
+
+button:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.04);
+    transition: 250ms ease;
+    transform: scaleX(0);
+}
+
+button:hover{
+    cursor: pointer;
+    filter: drop-shadow(0 2px 2px red) brightness(3);
+}
+
+button:hover:after{
+    transform: scaleX(1);
+}
+
+h1{
+    text-align:center;
+    color:darkblue;
+}
+
+.boxes{
+    position: relative;
+    display: grid;
+    grid-template-columns:repeat(3, auto);
+    grid-row-gap: 1rem;
+    background: rgba(0, 0, 0, 0.05);
+    font-family: 'Concert One', cursive;
+}
+
+.months{
+    position: relative;
+    background: transparent;
+    height: 40px;
+    width:fit-content;
+    border: 2px solid transparent;
+    box-shadow: 2px 5px 10px 2px rgba(255, 255, 255, 0.02),
+        inset 5px 5px 15px 1px rgba(255, 255, 255, 0.2),
+        2px -5px 10px 2px rgba(255, 255, 255, 0.02),
+        inset -5px -5px 15px 1px rgba(255, 255, 255, 0.2);
+        color: black;
+        font-family: 'FetBrains Mono';
+}
+
+.months:nth-child(1){
+    grid-column: 2/2;
+}
+.months:nth-child(4){
+    grid-column: 2/5;
+}
+.months:nth-child(5){
+    grid-column: 2/5;
+}
+.months:nth-child(6){
+    grid-column: 2/5;
+}
+.months:nth-child(7){
+    grid-column: 2/5;
+}
+
+.inputText{
+    position: relative;
+    font-size: 1.5em;
+    width: 100%;
+    border-radius: 25px;
+    outline: none;
+    border: 10px solid transparent;
+    cursor: pointer;
+    background: transparent;
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.08),
+             -10px -10px 10px 0px rgba(0, 0, 0, 0.05);
+    z-index: 50;
+    font-family: 'Ubuntu Mono' , monospace;
+    padding-left: 5px;
+}
+
+.inputText:focus{
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.message{
+    font-family: 'Gotu', sans-serif;
+    color: purple;
+    text-shadow: -1px 1px 0 #fff,
+                 -1px 1px 0 #000,
+                  1px 1px 0 #000,
+                  1px -1px 0 #000,
+                  1px -1px 0 #fff;
+     box-shadow: 2px 5px 10px 2px rgba(255, 255, 255, 0.02),
+                  inset 5px 5px 15px 1px rgba(255, 255, 255, 0.2),
+                  2px -5px 10px 2px rgba(255, 255, 255, 0.02),
+                  inset -5px -5px 15px 1px rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    text-align: center;
+}
+
+.messageShow{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    margin-top: 1em;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+small{
+    font-family: 'Gotu', sans-serif;
+    color: darkred;
+    text-shadow: -1px 1px 0 #fff,
+                 -1px 1px 0 #000,
+                  1px 1px 0 #000,
+                  1px -1px 0 #000,
+                  1px -1px 0 #fff;
+     box-shadow: 2px 5px 10px 2px rgba(255, 255, 255, 0.02),
+                  inset 5px 5px 15px 1px rgba(255, 255, 255, 0.2),
+                  2px -5px 10px 2px rgba(255, 255, 255, 0.02),
+                  inset -5px -5px 15px 1px rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.textColor{
+    font-style: normal;
+    font-weight: bolder;
+}

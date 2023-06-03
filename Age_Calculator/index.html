@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>"Age Calculator"</h1>
+        <br>
+        <h3 class="message"> Hii , What's your Name ?</h3>
+        <br>
+        <input type="text" class="inputText" placeholder="Enter your Name:"
+        data-inputText autofocus>
+        <div class="date">
+            <input type="datetime-local" class="dateBar" data-birth>
+           <button class="button" data-calculate>Calculate</button>
+           <button class="button" data-clear>Reset</button>
+        </div>
+    <h3 class="messageShow" messageShow></h3>
+    <div class="boxes" data-boxes>
+        Your Current Age: <div class="months"></div>
+        <div class="months"></div>
+        <div class="months"></div>
+        Your Age in Days:  <div class="months"></div>
+        Your Age in Hours:  <div class="months"></div>
+        Your Age in Minutes: <div class="months"></div>
+        Your Age in Seconds:  <div class="months"></div>
+         </div>
+         <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+         </ul>
+        </div>
+</body>
+<script type="text/javascript" src="calculator.js"></script>
+</html>
